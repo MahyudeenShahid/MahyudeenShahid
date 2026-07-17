@@ -1,56 +1,71 @@
-<svg width="485" height="195" viewBox="0 0 485 195" xmlns="http://www.w3.org/2000/svg">
+<svg width="495" height="470" viewBox="0 0 495 470" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Rounded corners clip path for progress bar -->
     <clipPath id="barClip">
-      <rect x="25" y="55" width="435" height="10" rx="5" />
+      <rect x="25" y="60" width="445" height="12" rx="6" />
     </clipPath>
   </defs>
 
   <!-- Background panel matching your theme -->
-  <rect x="0.5" y="0.5" width="484" height="194" rx="8" fill="#030712" stroke="#0D9488" stroke-width="1.5" />
+  <rect x="0.5" y="0.5" width="494" height="469" rx="8" fill="#030712" stroke="#0D9488" stroke-width="1.5" />
 
   <!-- Card Title -->
-  <text x="25" y="32" fill="#10B981" font-family="'Segoe UI', -apple-system, sans-serif" font-size="14" font-weight="bold">Top Languages</text>
+  <text x="25" y="35" fill="#10B981" font-family="'Segoe UI', -apple-system, sans-serif" font-size="14" font-weight="bold">Top Languages</text>
 
   <!-- Progress Bar Group -->
   <g clip-path="url(#barClip)">
-    <rect x="25" y="55" width="183.5" height="10" fill="#10B981" /> <!-- TypeScript 42.2% -->
-    <rect x="208.5" y="55" width="113.1" height="10" fill="#0D9488" /> <!-- Python 26.0% -->
-    <rect x="321.6" y="55" width="80.9" height="10" fill="#34D399" /> <!-- JavaScript 18.6% -->
-    <rect x="402.5" y="55" width="22.6" height="10" fill="#10B981" opacity="0.6" /> <!-- HTML 5.2% -->
-    <rect x="425.1" y="55" width="20" height="10" fill="#0D9488" opacity="0.6" /> <!-- CSS 4.6% -->
-    <rect x="445.1" y="55" width="14.9" height="10" fill="#4B5563" /> <!-- Others 3.4% -->
+    <rect x="25.00" y="60" width="187.79" height="12" fill="#10B981" opacity="1" />
+    <rect x="212.79" y="60" width="115.70" height="12" fill="#0D9488" opacity="1" />
+    <rect x="328.49" y="60" width="82.77" height="12" fill="#34D399" opacity="1" />
+    <rect x="411.26" y="60" width="23.14" height="12" fill="#10B981" opacity="0.6" />
+    <rect x="434.40" y="60" width="20.47" height="12" fill="#0D9488" opacity="0.6" />
+    <rect x="454.87" y="60" width="15.13" height="12" fill="#4B5563" opacity="1" />
   </g>
 
-  <!-- Legend Row 1 -->
-  <!-- TypeScript -->
-  <circle cx="31" cy="98" r="4" fill="#10B981" />
-  <text x="42" y="102" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" font-weight="500">TypeScript</text>
-  <text x="125" y="102" fill="#F8FAFC" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" font-weight="bold">42.2%</text>
+  <!-- Grid Card 1: TypeScript -->
+  <g>
+    <rect x="25" y="95" width="215" height="95" rx="6" ry="6" fill="#030712" stroke="#0D9488" stroke-width="1" stroke-opacity="0.3" />
+    <circle cx="47" cy="120" r="6" fill="#10B981" opacity="1" />
+    <text x="61" y="125" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="14" font-weight="500">TypeScript</text>
+    <text x="132" y="167" fill="#10B981" font-family="'Segoe UI', -apple-system, sans-serif" font-size="28" font-weight="bold" text-anchor="middle">42.2%</text>
+  </g>
 
-  <!-- Python -->
-  <circle cx="180" cy="98" r="4" fill="#0D9488" />
-  <text x="191" y="102" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" font-weight="500">Python</text>
-  <text x="250" y="102" fill="#F8FAFC" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" font-weight="bold">26.0%</text>
+  <!-- Grid Card 2: Python -->
+  <g>
+    <rect x="255" y="95" width="215" height="95" rx="6" ry="6" fill="#030712" stroke="#0D9488" stroke-width="1" stroke-opacity="0.3" />
+    <circle cx="277" cy="120" r="6" fill="#0D9488" opacity="1" />
+    <text x="291" y="125" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="14" font-weight="500">Python</text>
+    <text x="362" y="167" fill="#0D9488" font-family="'Segoe UI', -apple-system, sans-serif" font-size="28" font-weight="bold" text-anchor="middle">26.0%</text>
+  </g>
 
-  <!-- JavaScript -->
-  <circle cx="320" cy="98" r="4" fill="#34D399" />
-  <text x="331" y="102" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" font-weight="500">JavaScript</text>
-  <text x="405" y="102" fill="#F8FAFC" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" font-weight="bold">18.6%</text>
+  <!-- Grid Card 3: JavaScript -->
+  <g>
+    <rect x="25" y="210" width="215" height="95" rx="6" ry="6" fill="#030712" stroke="#0D9488" stroke-width="1" stroke-opacity="0.3" />
+    <circle cx="47" cy="235" r="6" fill="#34D399" opacity="1" />
+    <text x="61" y="240" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="14" font-weight="500">JavaScript</text>
+    <text x="132" y="282" fill="#34D399" font-family="'Segoe UI', -apple-system, sans-serif" font-size="28" font-weight="bold" text-anchor="middle">18.6%</text>
+  </g>
 
-  <!-- Legend Row 2 -->
-  <!-- HTML -->
-  <circle cx="31" cy="138" r="4" fill="#10B981" opacity="0.6" />
-  <text x="42" y="142" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" font-weight="500">HTML</text>
-  <text x="125" y="142" fill="#F8FAFC" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" font-weight="bold">5.2%</text>
+  <!-- Grid Card 4: HTML -->
+  <g>
+    <rect x="255" y="210" width="215" height="95" rx="6" ry="6" fill="#030712" stroke="#0D9488" stroke-width="1" stroke-opacity="0.3" />
+    <circle cx="277" cy="235" r="6" fill="#10B981" opacity="0.6" />
+    <text x="291" y="240" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="14" font-weight="500">HTML</text>
+    <text x="362" y="282" fill="#10B981" opacity="0.6" font-family="'Segoe UI', -apple-system, sans-serif" font-size="28" font-weight="bold" text-anchor="middle">5.2%</text>
+  </g>
 
-  <!-- CSS -->
-  <circle cx="180" cy="138" r="4" fill="#0D9488" opacity="0.6" />
-  <text x="191" y="142" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" font-weight="500">CSS</text>
-  <text x="250" y="142" fill="#F8FAFC" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" font-weight="bold">4.6%</text>
+  <!-- Grid Card 5: CSS -->
+  <g>
+    <rect x="25" y="325" width="215" height="95" rx="6" ry="6" fill="#030712" stroke="#0D9488" stroke-width="1" stroke-opacity="0.3" />
+    <circle cx="47" cy="350" r="6" fill="#0D9488" opacity="0.6" />
+    <text x="61" y="355" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="14" font-weight="500">CSS</text>
+    <text x="132" y="397" fill="#0D9488" font-family="'Segoe UI', -apple-system, sans-serif" font-size="28" font-weight="bold" text-anchor="middle">4.6%</text>
+  </g>
 
-  <!-- Others -->
-  <circle cx="320" cy="138" r="4" fill="#4B5563" />
-  <text x="331" y="142" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" font-weight="500">Others</text>
-  <text x="405" y="142" fill="#F8FAFC" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" font-weight="bold">3.4%</text>
+  <!-- Grid Card 6: Others -->
+  <g>
+    <rect x="255" y="325" width="215" height="95" rx="6" ry="6" fill="#030712" stroke="#0D9488" stroke-width="1" stroke-opacity="0.3" />
+    <circle cx="277" cy="350" r="6" fill="#4B5563" opacity="1" />
+    <text x="291" y="355" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="14" font-weight="500">Others</text>
+    <text x="362" y="397" fill="#4B5563" font-family="'Segoe UI', -apple-system, sans-serif" font-size="28" font-weight="bold" text-anchor="middle">3.4%</text>
+  </g>
 </svg>

@@ -14,6 +14,8 @@ I’m **Mahyudeen Shahid**, a Software Engineering student and Full-Stack Web De
 
 I work with **React, Next.js, MERN stack, and Supabase**, combining creative frontend development with strong backend functionality to build scalable full-stack solutions. I’m also passionate about **AI and automation**, building AI agents and workflows using tools like **n8n**, and I have experience deploying applications across Netlify, Vercel, DigitalOcean, AWS, Google Cloud, Azure, and Hostinger.
 
+> 💡 *"Every error is a lesson and every crash is an opportunity to rebuild stronger."*
+
 - 🎓 **Education:** B.S. in Software Engineering, Pakistan.
 - 💬 **Ask me about:** Creative development, full-stack architectures, or automated AI agent workflows.
 - ✉️ **Contact:** [mahyudeenjutt@gmail.com](mailto:mahyudeenjutt@gmail.com)
@@ -92,5 +94,6 @@ I work with **React, Next.js, MERN stack, and Supabase**, combining creative fro
 ---
 
 <p align="center">
-  Generated with 💚 using pure SVG &amp; SMIL animations.
+  Designed, thought, and developed with 💚 by <b>Mahyudeen Shahid</b><br/>
+  <sub>Every line of code crafted for immersive and interactive digital experiences.</sub>
 </p>
