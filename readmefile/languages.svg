@@ -5,46 +5,42 @@
     </clipPath>
   </defs>
 
-  <!-- Background panel matching your theme -->
   <rect x="0.5" y="0.5" width="494" height="469" rx="8" fill="#030712" stroke="#0D9488" stroke-width="1.5" />
-
-  <!-- Card Title -->
   <text x="25" y="35" fill="#10B981" font-family="'Segoe UI', -apple-system, sans-serif" font-size="14" font-weight="bold">Top Languages</text>
 
-  <!-- Progress Bar Group -->
   <g clip-path="url(#barClip)">
-    <rect x="25.00" y="60" width="181.23" height="12" fill="#10B981" opacity="1" />    <rect x="206.23" y="60" width="117.48" height="12" fill="#0D9488" opacity="1" />    <rect x="323.70" y="60" width="52.39" height="12" fill="#34D399" opacity="1" />    <rect x="376.09" y="60" width="29.50" height="12" fill="#10B981" opacity="0.6" />    <rect x="405.59" y="60" width="29.14" height="12" fill="#0D9488" opacity="0.6" />    <rect x="434.73" y="60" width="35.27" height="12" fill="#4B5563" opacity="1" />
+    <rect x="25.00" y="60" width="186.56" height="12" fill="#10B981" opacity="1" />    <rect x="211.56" y="60" width="117.22" height="12" fill="#0D9488" opacity="1" />    <rect x="328.78" y="60" width="82.34" height="12" fill="#34D399" opacity="1" />    <rect x="411.12" y="60" width="22.95" height="12" fill="#10B981" opacity="0.6" />    <rect x="434.07" y="60" width="20.38" height="12" fill="#0D9488" opacity="0.6" />    <rect x="454.45" y="60" width="15.55" height="12" fill="#4B5563" opacity="1" />
   </g>
 
   <g>
     <rect x="25" y="95" width="215" height="95" rx="6" ry="6" fill="#030712" stroke="#0D9488" stroke-width="1" stroke-opacity="0.3" />
     <circle cx="47" cy="120" r="6" fill="#10B981" opacity="1" />
     <text x="61" y="125" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="14" font-weight="500">TypeScript</text>
-    <text x="132" y="167" fill="#10B981" font-family="'Segoe UI', -apple-system, sans-serif" font-size="28" font-weight="bold" text-anchor="middle">40.7%</text>
+    <text x="132" y="167" fill="#10B981" font-family="'Segoe UI', -apple-system, sans-serif" font-size="28" font-weight="bold" text-anchor="middle">41.9%</text>
   </g>  <g>
     <rect x="255" y="95" width="215" height="95" rx="6" ry="6" fill="#030712" stroke="#0D9488" stroke-width="1" stroke-opacity="0.3" />
     <circle cx="277" cy="120" r="6" fill="#0D9488" opacity="1" />
     <text x="291" y="125" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="14" font-weight="500">Python</text>
-    <text x="362" y="167" fill="#0D9488" font-family="'Segoe UI', -apple-system, sans-serif" font-size="28" font-weight="bold" text-anchor="middle">26.4%</text>
+    <text x="362" y="167" fill="#0D9488" font-family="'Segoe UI', -apple-system, sans-serif" font-size="28" font-weight="bold" text-anchor="middle">26.3%</text>
   </g>  <g>
     <rect x="25" y="210" width="215" height="95" rx="6" ry="6" fill="#030712" stroke="#0D9488" stroke-width="1" stroke-opacity="0.3" />
     <circle cx="47" cy="235" r="6" fill="#34D399" opacity="1" />
-    <text x="61" y="240" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="14" font-weight="500">Jupyter Noteb..</text>
-    <text x="132" y="282" fill="#34D399" font-family="'Segoe UI', -apple-system, sans-serif" font-size="28" font-weight="bold" text-anchor="middle">11.8%</text>
+    <text x="61" y="240" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="14" font-weight="500">JavaScript</text>
+    <text x="132" y="282" fill="#34D399" font-family="'Segoe UI', -apple-system, sans-serif" font-size="28" font-weight="bold" text-anchor="middle">18.5%</text>
   </g>  <g>
     <rect x="255" y="210" width="215" height="95" rx="6" ry="6" fill="#030712" stroke="#0D9488" stroke-width="1" stroke-opacity="0.3" />
     <circle cx="277" cy="235" r="6" fill="#10B981" opacity="0.6" />
-    <text x="291" y="240" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="14" font-weight="500">CSS</text>
-    <text x="362" y="282" fill="#10B981" font-family="'Segoe UI', -apple-system, sans-serif" font-size="28" font-weight="bold" text-anchor="middle">6.6%</text>
+    <text x="291" y="240" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="14" font-weight="500">HTML</text>
+    <text x="362" y="282" fill="#10B981" font-family="'Segoe UI', -apple-system, sans-serif" font-size="28" font-weight="bold" text-anchor="middle">5.2%</text>
   </g>  <g>
     <rect x="25" y="325" width="215" height="95" rx="6" ry="6" fill="#030712" stroke="#0D9488" stroke-width="1" stroke-opacity="0.3" />
     <circle cx="47" cy="350" r="6" fill="#0D9488" opacity="0.6" />
-    <text x="61" y="355" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="14" font-weight="500">JavaScript</text>
-    <text x="132" y="397" fill="#0D9488" font-family="'Segoe UI', -apple-system, sans-serif" font-size="28" font-weight="bold" text-anchor="middle">6.5%</text>
+    <text x="61" y="355" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="14" font-weight="500">CSS</text>
+    <text x="132" y="397" fill="#0D9488" font-family="'Segoe UI', -apple-system, sans-serif" font-size="28" font-weight="bold" text-anchor="middle">4.6%</text>
   </g>  <g>
     <rect x="255" y="325" width="215" height="95" rx="6" ry="6" fill="#030712" stroke="#0D9488" stroke-width="1" stroke-opacity="0.3" />
     <circle cx="277" cy="350" r="6" fill="#4B5563" opacity="1" />
     <text x="291" y="355" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="14" font-weight="500">Others</text>
-    <text x="362" y="397" fill="#4B5563" font-family="'Segoe UI', -apple-system, sans-serif" font-size="28" font-weight="bold" text-anchor="middle">7.9%</text>
+    <text x="362" y="397" fill="#4B5563" font-family="'Segoe UI', -apple-system, sans-serif" font-size="28" font-weight="bold" text-anchor="middle">3.5%</text>
   </g>
 </svg>
