@@ -76,7 +76,7 @@ I work with **React, Next.js, MERN stack, and Supabase**, combining creative fro
 
 <p align="left">
   <!-- Custom Color-Matched GitHub Stats -->
-  <img src="https://ghstats.dev/api/card?username=MahyudeenShahid&bg=030712&title_color=10B981&text=94A3B8&icon_color=34D399&border_color=0D9488" alt="Mahyudeen's GitHub Stats" height="195" />
+  <img src="readmefile/stats.svg" alt="Mahyudeen's GitHub Stats" height="195" />
   
   <!-- Custom Color-Matched Top Languages -->
   <img src="readmefile/languages.svg" alt="Top Languages" height="195" />
