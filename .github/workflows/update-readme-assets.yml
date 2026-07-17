@@ -5,15 +5,18 @@ on:
     - cron: '0 0 * * *' # runs daily at midnight
   workflow_dispatch: # allows manual triggering from github repository page
 
+permissions:
+  contents: write
+
 jobs:
   update-assets:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
           
