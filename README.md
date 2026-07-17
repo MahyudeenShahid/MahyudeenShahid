@@ -78,10 +78,10 @@ I work with **React, Next.js, MERN stack, and Supabase**, combining creative fro
 
 <p align="left">
   <!-- Custom Color-Matched GitHub Stats -->
-  <img src="readmefile/stats.svg" alt="Mahyudeen's GitHub Stats" height="195" />
+  <img src="readmefile/stats.svg" alt="Mahyudeen's GitHub Stats" width="48%" />
   
   <!-- Custom Color-Matched Top Languages -->
-  <img src="readmefile/languages.svg" alt="Top Languages" height="195" />
+  <img src="readmefile/languages.svg" alt="Top Languages" width="48%" />
 </p>
 
 <p align="left">

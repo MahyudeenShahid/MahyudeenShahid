@@ -15,8 +15,14 @@ def fetch_json(url, token=None):
     try:
         with urllib.request.urlopen(req) as response:
             return json.loads(response.read().decode())
-    except Exception as e:
+    except urllib.error.HTTPError as e:
+        if e.code == 403:
+            print(f"Warning: GitHub API rate limit hit on {url}.")
+            return "RATE_LIMIT"
         print(f"Error fetching JSON {url}: {e}")
+        return None
+    except Exception as e:
+        print(f"Error: {e}")
         return None
 
 def fetch_html(url):
@@ -37,22 +43,25 @@ def main():
     user_url = f"https://api.github.com/users/{username}"
     user_data = fetch_json(user_url, token)
     
-    if user_data:
+    if isinstance(user_data, dict):
         followers = user_data.get("followers", 0)
         public_repos_count = user_data.get("public_repos", 0)
     else:
         followers = 2
         public_repos_count = 35
 
-    # 2. Fetch Repositories, Sum Stars and Language Bytes
+    # 2. Fetch Repositories list
     repos_url = f"https://api.github.com/users/{username}/repos?per_page=100"
     repos = fetch_json(repos_url, token)
-    if not repos:
+    if not isinstance(repos, list):
         repos = []
         
     total_stars = 0
     non_fork_count = 0
     lang_bytes = defaultdict(int)
+    
+    # Flag to toggle language fallback when rate limited
+    rate_limited = False
     
     print(f"Analyzing {len(repos)} repositories...")
     for repo in repos:
@@ -61,14 +70,24 @@ def main():
         non_fork_count += 1
         total_stars += repo.get("stargazers_count", 0)
         
-        lang_url = repo.get("languages_url")
-        if lang_url:
-            langs = fetch_json(lang_url, token)
-            if langs:
-                for lang, bytes_count in langs.items():
-                    lang_bytes[lang] += bytes_count
+        # 3. Pull language info (with rate-limit fallback)
+        if not rate_limited:
+            lang_url = repo.get("languages_url")
+            if lang_url:
+                langs = fetch_json(lang_url, token)
+                if langs == "RATE_LIMIT":
+                    rate_limited = True
+                elif isinstance(langs, dict):
+                    for lang, bytes_count in langs.items():
+                        lang_bytes[lang] += bytes_count
+                        
+        if rate_limited:
+            # Fallback to the primary repository language to avoid 403 queries
+            primary_lang = repo.get("language")
+            if primary_lang:
+                lang_bytes[primary_lang] += 50000
 
-    # 3. Scrape Contribution Graph & Compute Streak & Trends
+    # 4. Scrape Contribution Graph for total count and daily activity
     contrib_url = f"https://github.com/users/{username}/contributions"
     contrib_html = fetch_html(contrib_url)
     
@@ -76,12 +95,10 @@ def main():
     total_contributions = 0
     
     if contrib_html:
-        # Regex to locate total contributions number
         match = re.search(r"(\d+[\d,]*)\s+contribution", contrib_html, re.IGNORECASE)
         if match:
             total_contributions = int(match.group(1).replace(",", ""))
             
-        # Parse individual days and tooltips to get exact counts
         td_matches = re.findall(r'<td[^>]*data-date="(\d{4}-\d{2}-\d{2})"[^>]*id="([^"]+)"[^>]*data-level="(\d+)"', contrib_html)
         for date_str, element_id, level in td_matches:
             tooltip_match = re.search(fr'<tool-tip[^>]*for="{element_id}"[^>]*>(.*?)</tool-tip>', contrib_html, re.DOTALL)
@@ -95,31 +112,26 @@ def main():
             days_info[date_str] = {"level": int(level), "count": count}
 
     if not days_info:
-        # Fallback values if scraping failed
         total_contributions = 639
         days_info = {str(datetime.date.today() - datetime.timedelta(days=i)): {"level": 1, "count": 2} for i in range(365)}
 
-    # Calculate metrics from days_info
+    # Calculate metrics
     sorted_dates = sorted(days_info.keys())
     
-    # Commits this week (last 7 days) & Last week (7 to 14 days ago)
     this_week_dates = sorted_dates[-7:]
     last_week_dates = sorted_dates[-14:-7]
     
     this_week_commits = sum(days_info[d]["count"] for d in this_week_dates)
     last_week_commits = sum(days_info[d]["count"] for d in last_week_dates)
     
-    # Weekly trend
     if last_week_commits == 0:
         trend_str = f"+{this_week_commits * 100}%" if this_week_commits > 0 else "0%"
     else:
         diff_pct = ((this_week_commits - last_week_commits) / last_week_commits) * 100
         trend_str = f"+{diff_pct:.0f}%" if diff_pct >= 0 else f"{diff_pct:.0f}%"
         
-    # Avg Commits / Day
     avg_commits = total_contributions / 365.0
     
-    # Most active day
     weekday_counts = defaultdict(int)
     for d_str, d_data in days_info.items():
         try:
@@ -130,7 +142,6 @@ def main():
             pass
     most_active_day = max(weekday_counts.items(), key=lambda x: x[1])[0] if weekday_counts else "Tuesday"
     
-    # Calculate Streak
     streak = 0
     for d_str in reversed(sorted_dates):
         if days_info[d_str]["count"] > 0:
@@ -138,11 +149,10 @@ def main():
         else:
             if streak > 0:
                 break
-            if d_str == sorted_dates[-1]:  # today can be 0 if yesterday had commits
+            if d_str == sorted_dates[-1]:
                 continue
             break
 
-    # Fetch Exact PRs and Issues if token is available
     total_prs = 0
     total_issues = 0
     total_commits = 0
@@ -150,20 +160,19 @@ def main():
     if token:
         commits_url = f"https://api.github.com/search/commits?q=author:{username}"
         commits_data = fetch_json(commits_url, token)
-        if commits_data:
+        if isinstance(commits_data, dict):
             total_commits = commits_data.get("total_count", 0)
             
         prs_url = f"https://api.github.com/search/issues?q=author:{username}+type:pr"
         prs_data = fetch_json(prs_url, token)
-        if prs_data:
+        if isinstance(prs_data, dict):
             total_prs = prs_data.get("total_count", 0)
             
         issues_url = f"https://api.github.com/search/issues?q=author:{username}+type:issue"
         issues_data = fetch_json(issues_url, token)
-        if issues_data:
+        if isinstance(issues_data, dict):
             total_issues = issues_data.get("total_count", 0)
             
-    # Estimate values if token is missing
     if total_commits == 0:
         total_prs = int(total_contributions * 0.05) if total_contributions > 20 else 20
         total_issues = int(total_contributions * 0.01) if total_contributions > 100 else 0
@@ -173,7 +182,6 @@ def main():
     if coding_hours == 0:
         coding_hours = 187
 
-    # Calculate rating score
     score = (total_commits * 0.5) + (total_stars * 4.0) + (total_prs * 2.0) + (total_issues * 1.0) + (followers * 3.0) + (public_repos_count * 0.5)
     
     if score >= 600:
@@ -198,19 +206,17 @@ def main():
         grade = "C"
         progress_ratio = 0.2
         
-    # ------------------ GENERATE STATS.SVG (Detailed, Width 495, Height 470) ------------------
+    print(f"Results:\n - Commits: {total_commits}\n - Stars: {total_stars}\n - PRs: {total_prs}\n - Issues: {total_issues}\n - Hours: {coding_hours}\n - Repos: {public_repos_count}\n - Grade: {grade}")
+    
+    # ------------------ GENERATE STATS.SVG (Detailed) ------------------
     r = 38
     perimeter = 2 * 3.14159265 * r
     dashoffset = perimeter * (1.0 - progress_ratio)
     
     stats_svg = f"""<svg width="495" height="470" viewBox="0 0 495 470" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background panel matching your theme -->
   <rect x="0.5" y="0.5" width="494" height="469" rx="8" fill="#030712" stroke="#0D9488" stroke-width="1.5" />
-
-  <!-- Card Title -->
   <text x="25" y="35" fill="#10B981" font-family="'Segoe UI', -apple-system, sans-serif" font-size="14" font-weight="bold">GitHub Statistics</text>
 
-  <!-- Left Stats Grid -->
   <!-- Stars -->
   <text x="25" y="72" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" font-weight="500">Total Stars Earned:</text>
   <text x="240" y="72" fill="#F8FAFC" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" font-weight="bold" text-anchor="end">{total_stars}</text>
@@ -278,7 +284,7 @@ def main():
   </g>
 </svg>"""
 
-    # ------------------ GENERATE LANGUAGES.SVG (Grid, Width 495, Height 470) ------------------
+    # ------------------ GENERATE LANGUAGES.SVG (Grid) ------------------
     sorted_langs = sorted(lang_bytes.items(), key=lambda x: x[1], reverse=True)
     top_6 = sorted_langs[:5]
     others_bytes = sum(x[1] for x in sorted_langs[5:])
@@ -307,12 +313,10 @@ def main():
         svg_rects.append(f'<rect x="{current_x:.2f}" y="60" width="{width:.2f}" height="12" fill="{color}" opacity="{opacity}" />')
         current_x += width
         
-    # 3 rows of 2 columns grid coordinates
-    # Card width = 215, height = 95
     grid_coords = [
-        (25, 95),   (255, 95),  # Row 1
-        (25, 210),  (255, 210), # Row 2
-        (25, 325),  (255, 325)  # Row 3
+        (25, 95),   (255, 95),  
+        (25, 210),  (255, 210), 
+        (25, 325),  (255, 325)  
     ]
     
     for i, (lang, pct) in enumerate(formatted_langs):
@@ -338,13 +342,9 @@ def main():
     </clipPath>
   </defs>
 
-  <!-- Background panel matching your theme -->
   <rect x="0.5" y="0.5" width="494" height="469" rx="8" fill="#030712" stroke="#0D9488" stroke-width="1.5" />
-
-  <!-- Card Title -->
   <text x="25" y="35" fill="#10B981" font-family="'Segoe UI', -apple-system, sans-serif" font-size="14" font-weight="bold">Top Languages</text>
 
-  <!-- Progress Bar Group -->
   <g clip-path="url(#barClip)">
     {"    ".join(svg_rects)}
   </g>
