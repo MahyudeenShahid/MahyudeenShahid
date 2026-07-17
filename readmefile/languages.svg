@@ -1,0 +1,56 @@
+<svg width="485" height="195" viewBox="0 0 485 195" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Rounded corners clip path for progress bar -->
+    <clipPath id="barClip">
+      <rect x="25" y="55" width="435" height="10" rx="5" />
+    </clipPath>
+  </defs>
+
+  <!-- Background panel matching your theme -->
+  <rect x="0.5" y="0.5" width="484" height="194" rx="8" fill="#030712" stroke="#0D9488" stroke-width="1.5" />
+
+  <!-- Card Title -->
+  <text x="25" y="32" fill="#10B981" font-family="'Segoe UI', -apple-system, sans-serif" font-size="14" font-weight="bold">Top Languages</text>
+
+  <!-- Progress Bar Group -->
+  <g clip-path="url(#barClip)">
+    <rect x="25" y="55" width="183.5" height="10" fill="#10B981" /> <!-- TypeScript 42.2% -->
+    <rect x="208.5" y="55" width="113.1" height="10" fill="#0D9488" /> <!-- Python 26.0% -->
+    <rect x="321.6" y="55" width="80.9" height="10" fill="#34D399" /> <!-- JavaScript 18.6% -->
+    <rect x="402.5" y="55" width="22.6" height="10" fill="#10B981" opacity="0.6" /> <!-- HTML 5.2% -->
+    <rect x="425.1" y="55" width="20" height="10" fill="#0D9488" opacity="0.6" /> <!-- CSS 4.6% -->
+    <rect x="445.1" y="55" width="14.9" height="10" fill="#4B5563" /> <!-- Others 3.4% -->
+  </g>
+
+  <!-- Legend Row 1 -->
+  <!-- TypeScript -->
+  <circle cx="31" cy="98" r="4" fill="#10B981" />
+  <text x="42" y="102" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" font-weight="500">TypeScript</text>
+  <text x="125" y="102" fill="#F8FAFC" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" font-weight="bold">42.2%</text>
+
+  <!-- Python -->
+  <circle cx="180" cy="98" r="4" fill="#0D9488" />
+  <text x="191" y="102" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" font-weight="500">Python</text>
+  <text x="250" y="102" fill="#F8FAFC" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" font-weight="bold">26.0%</text>
+
+  <!-- JavaScript -->
+  <circle cx="320" cy="98" r="4" fill="#34D399" />
+  <text x="331" y="102" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" font-weight="500">JavaScript</text>
+  <text x="405" y="102" fill="#F8FAFC" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" font-weight="bold">18.6%</text>
+
+  <!-- Legend Row 2 -->
+  <!-- HTML -->
+  <circle cx="31" cy="138" r="4" fill="#10B981" opacity="0.6" />
+  <text x="42" y="142" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" font-weight="500">HTML</text>
+  <text x="125" y="142" fill="#F8FAFC" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" font-weight="bold">5.2%</text>
+
+  <!-- CSS -->
+  <circle cx="180" cy="138" r="4" fill="#0D9488" opacity="0.6" />
+  <text x="191" y="142" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" font-weight="500">CSS</text>
+  <text x="250" y="142" fill="#F8FAFC" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" font-weight="bold">4.6%</text>
+
+  <!-- Others -->
+  <circle cx="320" cy="138" r="4" fill="#4B5563" />
+  <text x="331" y="142" fill="#94A3B8" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" font-weight="500">Others</text>
+  <text x="405" y="142" fill="#F8FAFC" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" font-weight="bold">3.4%</text>
+</svg>
