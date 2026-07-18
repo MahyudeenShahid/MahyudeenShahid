@@ -111,6 +111,12 @@ I work with **React, Next.js, MERN stack, and Supabase**, combining creative fro
 ---
 
 <p align="center">
+  ⭐ <b>If you like this profile README, please consider leaving a star to show your support!</b> ⭐
+</p>
+
+---
+
+<p align="center">
   Designed, thought, and developed with 💚 by <a href="https://mahyudeen.netlify.app/" target="_blank"><b>Mahyudeen Shahid</b></a><br/>
   <sub>Every line of code crafted for immersive and interactive digital experiences.</sub>
 </p>
