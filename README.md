@@ -99,7 +99,7 @@ I work with **React, Next.js, MERN stack, and Supabase**, combining creative fro
 
 <!-- Streak Stats with theme sensitivity -->
 <p align="left">
-  <a href="https://git.io/streak-stats">
+  <a href="https://mahyudeen.netlify.app" target="_blank">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=MahyudeenShahid&theme=dark&background=030712&stroke=0D9488&ring=10B981&fire=34D399&currStreakNum=10B981&currStreakLabel=94A3B8&sideNums=94A3B8&sideLabels=94A3B8&dates=6B7280">
       <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=MahyudeenShahid&theme=light&background=FFFFFF&stroke=E2E8F0&ring=0D9488&fire=10B981&currStreakNum=0D9488&currStreakLabel=475569&sideNums=475569&sideLabels=475569&dates=94A3B8">
