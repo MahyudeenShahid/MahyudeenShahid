@@ -10,20 +10,28 @@
 <br/>
 
 ## 🚀 About Me
-I’m **Mahyudeen Shahid**, a Software Engineering student and Full-Stack Web Developer who builds impactful, high-performance web applications beyond simple landing pages, focusing on immersive and interactive experiences using **GSAP, Framer Motion, Three.js, and Spline**. 
+I’m **Mahyudeen Shahid**, a Software Engineering student, **Full-Stack Web Developer**, and **React Native App Developer**. I build high-performance products that go well beyond simple landing pages — immersive, interactive web experiences powered by **GSAP, Framer Motion, Three.js, and Spline**, and cross-platform mobile apps for **Android and iOS** from a single React Native codebase.
 
-I work with **React, Next.js, MERN stack, and Supabase**, combining creative frontend development with strong backend functionality to build scalable full-stack solutions. I’m also passionate about **AI and automation**, building AI agents and workflows using tools like **n8n**, and I have experience deploying applications across Netlify, Vercel, DigitalOcean, AWS, Google Cloud, Azure, and Hostinger.
+On the web I work with **React, Next.js, the MERN stack, and Supabase**, pairing creative frontend work with solid backend engineering to ship scalable full-stack solutions. On mobile I bring the same mindset to **React Native** — smooth animations, clean native-feeling UI, and shared business logic with my web projects. I’m also passionate about **AI and automation**, building AI agents and workflows with tools like **n8n**, and I’ve deployed applications across Netlify, Vercel, DigitalOcean, AWS, Google Cloud, Azure, and Hostinger.
 
 > 💡 *"Every error is a lesson and every crash is an opportunity to rebuild stronger."*
 
+- 🌐 **Web:** Full-stack apps with React, Next.js, Node.js & Supabase — with motion and 3D where it matters.
+- 📱 **Mobile:** Cross-platform Android & iOS apps with React Native.
+- 🤖 **AI & Automation:** AI agents and n8n workflows that remove repetitive work.
 - 🎓 **Education:** B.S. in Software Engineering, Pakistan.
-- 💬 **Ask me about:** Creative development, full-stack architectures, or automated AI agent workflows.
+- 💬 **Ask me about:** Creative development, full-stack architectures, React Native apps, or automated AI agent workflows.
 - ✉️ **Contact:** [mahyudeenjutt@gmail.com](mailto:mahyudeenjutt@gmail.com)
 - 🌐 **Portfolio:** [mahyudeen.netlify.app](https://mahyudeen.netlify.app)
 
 ---
 
 ## 🛠️ Technical Skills
+
+### 💻 Languages
+![JavaScript](https://img.shields.io/badge/JavaScript-10B981?style=flat-square&logo=javascript&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-0D9488?style=flat-square&logo=typescript&logoColor=white)
+![Python](https://img.shields.io/badge/Python-34D399?style=flat-square&logo=python&logoColor=white)
 
 ### 🖥️ Frontend & Creative
 ![React](https://img.shields.io/badge/React-10B981?style=flat-square&logo=react&logoColor=white)
@@ -33,6 +41,12 @@ I work with **React, Next.js, MERN stack, and Supabase**, combining creative fro
 ![GSAP](https://img.shields.io/badge/GSAP-10B981?style=flat-square&logo=greensock&logoColor=white)
 ![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white)
 ![Spline](https://img.shields.io/badge/Spline-0D9488?style=flat-square&logo=spline&logoColor=white)
+
+### 📱 Mobile App Development
+![React Native](https://img.shields.io/badge/React_Native-10B981?style=flat-square&logo=react&logoColor=white)
+![Expo](https://img.shields.io/badge/Expo-000000?style=flat-square&logo=expo&logoColor=white)
+![Android](https://img.shields.io/badge/Android-0D9488?style=flat-square&logo=android&logoColor=white)
+![iOS](https://img.shields.io/badge/iOS-34D399?style=flat-square&logo=apple&logoColor=white)
 
 ### ⚙️ Backend & API
 ![Node.js](https://img.shields.io/badge/Node.js-34D399?style=flat-square&logo=nodedotjs&logoColor=white)
@@ -60,7 +74,9 @@ I work with **React, Next.js, MERN stack, and Supabase**, combining creative fro
 ![Azure](https://img.shields.io/badge/Azure-0D9488?style=flat-square&logo=microsoftazure&logoColor=white)
 ![DigitalOcean](https://img.shields.io/badge/DigitalOcean-34D399?style=flat-square&logo=digitalocean&logoColor=white)
 ![Hostinger](https://img.shields.io/badge/Hostinger-10B981?style=flat-square&logo=hostinger&logoColor=white)
-![Git](https://img.shields.io/badge/Git-0D9488?style=flat-square&logo=git&logoColor=white)
+![Google Cloud](https://img.shields.io/badge/Google_Cloud-0D9488?style=flat-square&logo=googlecloud&logoColor=white)
+![Git](https://img.shields.io/badge/Git-34D399?style=flat-square&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-000000?style=flat-square&logo=github&logoColor=white)
 
 ---
 
@@ -118,5 +134,5 @@ I work with **React, Next.js, MERN stack, and Supabase**, combining creative fro
 
 <p align="center">
   Designed, thought, and developed with 💚 by <a href="https://mahyudeen.netlify.app/" target="_blank"><b>Mahyudeen Shahid</b></a><br/>
-  <sub>Every line of code crafted for immersive and interactive digital experiences.</sub>
+  <sub>Every line of code crafted for immersive, interactive experiences — on the web and on mobile.</sub>
 </p>

@@ -128,8 +128,8 @@
 
     <!-- LEFT PANEL CLI ANIMATION CLIPS -->
     <clipPath id="neofetchClip">
-      <rect x="226" y="90" height="20" width="0">
-        <animate attributeName="width" from="0" to="65" dur="0.5s" begin="0.2s" fill="freeze" />
+      <rect x="218" y="90" height="20" width="0">
+        <animate attributeName="width" from="0" to="75" dur="0.5s" begin="0.2s" fill="freeze" />
       </rect>
     </clipPath>
 
@@ -143,27 +143,32 @@
     <!-- RIGHT PANEL PHRASES CLIPPATHS -->
     <clipPath id="clipPhrase1">
       <rect x="522" y="180" height="30" width="0">
-        <animate attributeName="width" values="0; 184; 184; 0; 0" keyTimes="0; 0.0667; 0.1667; 0.1867; 1" dur="15s" repeatCount="indefinite" />
+        <animate attributeName="width" values="0; 259; 259; 0; 0" keyTimes="0; 0.0571; 0.1429; 0.1571; 1" dur="21s" repeatCount="indefinite" />
       </rect>
     </clipPath>
     <clipPath id="clipPhrase2">
       <rect x="522" y="180" height="30" width="0">
-        <animate attributeName="width" values="0; 0; 216; 216; 0; 0" keyTimes="0; 0.2; 0.2667; 0.3667; 0.3867; 1" dur="15s" repeatCount="indefinite" />
+        <animate attributeName="width" values="0; 0; 281; 281; 0; 0" keyTimes="0; 0.1667; 0.2238; 0.3095; 0.3238; 1" dur="21s" repeatCount="indefinite" />
       </rect>
     </clipPath>
     <clipPath id="clipPhrase3">
       <rect x="522" y="180" height="30" width="0">
-        <animate attributeName="width" values="0; 0; 248; 248; 0; 0" keyTimes="0; 0.4; 0.4667; 0.5667; 0.5867; 1" dur="15s" repeatCount="indefinite" />
+        <animate attributeName="width" values="0; 0; 281; 281; 0; 0" keyTimes="0; 0.3333; 0.3905; 0.4762; 0.4905; 1" dur="21s" repeatCount="indefinite" />
       </rect>
     </clipPath>
     <clipPath id="clipPhrase4">
       <rect x="522" y="180" height="30" width="0">
-        <animate attributeName="width" values="0; 0; 119; 119; 0; 0" keyTimes="0; 0.6; 0.6667; 0.7667; 0.7867; 1" dur="15s" repeatCount="indefinite" />
+        <animate attributeName="width" values="0; 0; 248; 248; 0; 0" keyTimes="0; 0.5; 0.5571; 0.6429; 0.6571; 1" dur="21s" repeatCount="indefinite" />
       </rect>
     </clipPath>
     <clipPath id="clipPhrase5">
       <rect x="522" y="180" height="30" width="0">
-        <animate attributeName="width" values="0; 0; 140; 140; 0; 0" keyTimes="0; 0.8; 0.8667; 0.9667; 0.9867; 1" dur="15s" repeatCount="indefinite" />
+        <animate attributeName="width" values="0; 0; 324; 324; 0; 0" keyTimes="0; 0.6667; 0.7238; 0.8095; 0.8238; 1" dur="21s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <clipPath id="clipPhrase6">
+      <rect x="522" y="180" height="30" width="0">
+        <animate attributeName="width" values="0; 0; 248; 248; 0; 0" keyTimes="0; 0.8333; 0.8905; 0.9762; 0.9905; 1" dur="21s" repeatCount="indefinite" />
       </rect>
     </clipPath>
   </defs>
@@ -351,34 +356,38 @@
 
       <!-- Phrases (stacked, opacity toggle + clipping widths) -->
       <g class="font-mono" font-size="18" font-weight="bold">
-        <!-- 1. Frontend Engineer -->
-        <text x="522" y="200" fill="#10B981" clip-path="url(#clipPhrase1)">Frontend Engineer
-          <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.1867;0.2;1" dur="15s" repeatCount="indefinite" />
+        <!-- 1. Full-Stack Web Developer -->
+        <text x="522" y="200" fill="#10B981" clip-path="url(#clipPhrase1)">Full-Stack Web Developer
+          <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.1571;0.1667;1" dur="21s" repeatCount="indefinite" />
         </text>
-        <!-- 2. Full Stack Developer -->
-        <text x="522" y="200" fill="#0D9488" clip-path="url(#clipPhrase2)" opacity="0">Full Stack Developer
-          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2;0.2001;0.3867;0.4;1" dur="15s" repeatCount="indefinite" />
+        <!-- 2. React Native App Developer -->
+        <text x="522" y="200" fill="#0D9488" clip-path="url(#clipPhrase2)" opacity="0">React Native App Developer
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.1667;0.166701;0.3238;0.3333;1" dur="21s" repeatCount="indefinite" />
         </text>
-        <!-- 3. Open Source Contributor -->
-        <text x="522" y="200" fill="#34D399" clip-path="url(#clipPhrase3)" opacity="0">Open Source Contributor
-          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.4;0.4001;0.5867;0.6;1" dur="15s" repeatCount="indefinite" />
+        <!-- 3. Creative Frontend Engineer -->
+        <text x="522" y="200" fill="#34D399" clip-path="url(#clipPhrase3)" opacity="0">Creative Frontend Engineer
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.3333;0.333301;0.4905;0.5;1" dur="21s" repeatCount="indefinite" />
         </text>
-        <!-- 4. UI Engineer -->
-        <text x="522" y="200" fill="#10B981" clip-path="url(#clipPhrase4)" opacity="0">UI Engineer
-          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.6;0.6001;0.7867;0.8;1" dur="15s" repeatCount="indefinite" />
+        <!-- 4. Motion &amp; 3D UI Engineer -->
+        <text x="522" y="200" fill="#10B981" clip-path="url(#clipPhrase4)" opacity="0">Motion &amp; 3D UI Engineer
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.5;0.501;0.6571;0.6667;1" dur="21s" repeatCount="indefinite" />
         </text>
-        <!-- 5. AI Enthusiast -->
-        <text x="522" y="200" fill="#0D9488" clip-path="url(#clipPhrase5)" opacity="0">AI Enthusiast
-          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.8;0.8001;0.9867;0.99;1" dur="15s" repeatCount="indefinite" />
+        <!-- 5. AI Agents &amp; Automation Builder -->
+        <text x="522" y="200" fill="#0D9488" clip-path="url(#clipPhrase5)" opacity="0">AI Agents &amp; Automation Builder
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.6667;0.666701;0.8238;0.8333;1" dur="21s" repeatCount="indefinite" />
+        </text>
+        <!-- 6. Open Source Contributor -->
+        <text x="522" y="200" fill="#34D399" clip-path="url(#clipPhrase6)" opacity="0">Open Source Contributor
+          <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.8333;0.833301;1" dur="21s" repeatCount="indefinite" />
         </text>
       </g>
 
       <!-- Integrated typing cursor -->
       <g>
         <animateTransform attributeName="transform" type="translate"
-                          values="0,0; 184,0; 184,0; 0,0; 0,0; 216,0; 216,0; 0,0; 0,0; 248,0; 248,0; 0,0; 0,0; 119,0; 119,0; 0,0; 0,0; 140,0; 140,0; 0,0; 0,0"
-                          keyTimes="0; 0.0667; 0.1667; 0.1867; 0.2; 0.2667; 0.3667; 0.3867; 0.4; 0.4667; 0.5667; 0.5867; 0.6; 0.6667; 0.7667; 0.7867; 0.8; 0.8667; 0.9667; 0.9867; 1"
-                          dur="15s" repeatCount="indefinite" />
+                          values="0,0; 259,0; 259,0; 0,0; 0,0; 281,0; 281,0; 0,0; 0,0; 281,0; 281,0; 0,0; 0,0; 248,0; 248,0; 0,0; 0,0; 324,0; 324,0; 0,0; 0,0; 248,0; 248,0; 0,0; 0,0"
+                          keyTimes="0; 0.0571; 0.1429; 0.1571; 0.1667; 0.2238; 0.3095; 0.3238; 0.3333; 0.3905; 0.4762; 0.4905; 0.5; 0.5571; 0.6429; 0.6571; 0.6667; 0.7238; 0.8095; 0.8238; 0.8333; 0.8905; 0.9762; 0.9905; 1"
+                          dur="21s" repeatCount="indefinite" />
         <rect x="522" y="183" width="8" height="20" fill="url(#cursorGradient)" class="cursor-blink" />
       </g>
     </g>
@@ -416,7 +425,7 @@
       <svg viewBox="0 0 24 24" x="490" y="307" width="16" height="16">
         <path stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M4 17l6-5-6-5M12 19h8"/>
       </svg>
-      <text x="518" y="320" fill="#94A3B8" font-size="14" class="font-sans">Focus: <tspan fill="#F8FAFC" font-weight="500">Creative Dev (GSAP/3JS) &amp; Full-Stack</tspan></text>
+      <text x="518" y="320" fill="#94A3B8" font-size="14" class="font-sans">Focus: <tspan fill="#F8FAFC" font-weight="500">Full-Stack Web, React Native Apps &amp; Creative Dev</tspan></text>
     </g>
 
     <!-- 4. Portfolio -->
@@ -528,12 +537,12 @@
       <rect x="898" y="482" width="80" height="28" rx="8" fill="rgba(52, 211, 153, 0.03)" stroke="rgba(52, 211, 153, 0.2)" stroke-width="1" />
       <text x="938" y="499" fill="#34D399" font-size="12" font-weight="600" text-anchor="middle" class="font-sans">Vercel</text>
     </g>
-    <!-- Git -->
+    <!-- React Native -->
     <g class="skill-pill" style="--hover-glow: rgba(13, 148, 136, 0.4);" opacity="0">
       <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="4.18s" fill="freeze" />
       <animateTransform attributeName="transform" type="translate" from="0,10" to="0,0" dur="0.3s" begin="4.18s" fill="freeze" />
-      <rect x="990" y="482" width="65" height="28" rx="8" fill="rgba(13, 148, 136, 0.03)" stroke="rgba(13, 148, 136, 0.2)" stroke-width="1" />
-      <text x="1022.5" y="499" fill="#0D9488" font-size="12" font-weight="600" text-anchor="middle" class="font-sans">Git</text>
+      <rect x="990" y="482" width="105" height="28" rx="8" fill="rgba(13, 148, 136, 0.03)" stroke="rgba(13, 148, 136, 0.2)" stroke-width="1" />
+      <text x="1042.5" y="499" fill="#0D9488" font-size="12" font-weight="600" text-anchor="middle" class="font-sans">React Native</text>
     </g>
 
     <!-- SOCIAL LINKS -->
